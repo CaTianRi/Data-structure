@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// 推送测试
+
 void HeapDestory(Heap *hp)
 {
     free(hp->_a);
