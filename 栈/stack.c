@@ -27,7 +27,7 @@ void StackPush(ST* ps, STDataType x)
 		if (!temp)
 		{
 			perror("StackPush");
-			return -1;
+			return;
 		}
 		ps->capacity *= 2;
 		ps->a = temp;
