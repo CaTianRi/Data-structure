@@ -130,7 +130,7 @@ void QuickSortNonR(int *a, int left, int right) {
         right = stk.top();
         stk.pop();
 
-        int keyi = PartSort3(a, left, right);
+        int keyi = PartSort1(a, left, right);
 
         if (left < keyi - 1) {
             stk.push(keyi - 1);
@@ -143,3 +143,5 @@ void QuickSortNonR(int *a, int left, int right) {
         }
     }
 }
+
+
