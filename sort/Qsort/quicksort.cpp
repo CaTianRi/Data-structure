@@ -125,21 +125,21 @@ void QuickSortNonR(int *a, int left, int right) {
     stk.push(left);
 
     while (!stk.empty()) {
-        int lf = stk.top();
+        left = stk.top();
         stk.pop();
-        int rg = stk.top();
+        right = stk.top();
         stk.pop();
 
-        int keyi = PartSort3(a, lf, rg);
-
-        if (keyi + 1 < right) {
-            stk.push(keyi + 1);
-            stk.push(rg);
-        }
+        int keyi = PartSort3(a, left, right);
 
         if (left < keyi - 1) {
             stk.push(keyi - 1);
-            stk.push(lf);
+            stk.push(left);
+        }
+
+        if (keyi + 1 < right) {
+            stk.push(right);
+            stk.push(keyi + 1);
         }
     }
 }
